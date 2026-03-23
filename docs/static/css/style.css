@@ -90,7 +90,7 @@ a {
 .home-splash {
   height: calc(100vh - 113px);
   background-image: url("../images/homepage-background.png");
-  background-size: 80% auto;
+  background-size: 70% auto;
   background-position: center;
   background-repeat: no-repeat;
 }
