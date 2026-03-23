@@ -88,7 +88,7 @@ a {
 ----------------------------------------------------------------------------- */
 .home-splash {
   height: calc(100vh - 113px);
-  background-image: url("{{asset_prefix}}static/images/homepage-background.png");
+  background-image: url("../images/homepage-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
