@@ -5,7 +5,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #111;
-  background: #fff;
+  background-color: #fff;
+  background-image: url("../images/Lined-Background.png");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 932px auto;
 }
 
 .container {
@@ -23,7 +27,7 @@ a {
 ----------------------------------------------------------------------------- */
 .site-header {
   padding: 20px 0 12px;
-  background: #fff;
+  background: transparent;
 }
 
 .header-inner {
@@ -44,7 +48,7 @@ a {
 
 
 /* -----------------------------------------------------------------------------
-   Header Navigation (Courier + Dividers)
+   Header Navigation
 ----------------------------------------------------------------------------- */
 .site-nav {
   display: flex;
@@ -83,14 +87,27 @@ a {
 
 
 /* -----------------------------------------------------------------------------
-   Homepage Splash (top aligned fixed size)
+   Homepage
 ----------------------------------------------------------------------------- */
-.home-splash {
-  height: calc(100vh - 96px);
-  background-image: url("../images/homepage-background.png");
-  background-size: min(932px, 90%);
-  background-position: center top;
-  background-repeat: no-repeat;
+.home-intro {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.home-intro-inner {
+  width: 100%;
+  text-align: center;
+}
+
+.home-intro-inner p {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
 }
 
 
@@ -98,7 +115,7 @@ a {
    Shared Page Sections
 ----------------------------------------------------------------------------- */
 .page-hero {
-  padding: 72px 0 32px;
+  padding: 72px 0 24px;
 }
 
 .page-hero h1 {
@@ -114,7 +131,7 @@ a {
 }
 
 .page-section {
-  padding: 24px 0 72px;
+  padding: 16px 0 72px;
 }
 
 .content-narrow {
@@ -127,29 +144,6 @@ a {
 
 .content-narrow p {
   line-height: 1.7;
-}
-
-
-/* -----------------------------------------------------------------------------
-   Buttons
------------------------------------------------------------------------------ */
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #111;
-  color: #fff;
-  text-decoration: none;
-  border: 1px solid #111;
-}
-
-.button:hover {
-  opacity: 0.9;
-}
-
-.button-outline {
-  background: transparent;
-  color: #111;
-  border: 1px solid #111;
 }
 
 
@@ -171,29 +165,35 @@ a {
    Responsive
 ----------------------------------------------------------------------------- */
 @media (max-width: 800px) {
-
   .header-inner {
     flex-direction: column;
     gap: 18px;
+    align-items: flex-start;
   }
 
   .site-nav {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .site-logo {
     max-height: 56px;
   }
 
-  .home-splash {
-    height: calc(100vh - 120px);
-    background-size: 95%;
-    background-position: center top;
+  .site-nav a {
+    font-size: 14px;
+  }
+
+  .home-intro {
+    min-height: calc(100vh - 120px);
+    padding-top: 80px;
+  }
+
+  .home-intro-inner p {
+    font-size: 18px;
   }
 
   .page-hero h1 {
     font-size: 2rem;
   }
-
 }
