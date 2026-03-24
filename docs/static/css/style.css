@@ -459,7 +459,7 @@ a {
 }
 
 .projects-subnav nav {
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   align-items: center;
   font-size: 15px;
