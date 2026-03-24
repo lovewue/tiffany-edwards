@@ -205,31 +205,79 @@ a {
 /* -----------------------------------------------------------------------------
    About page
 ----------------------------------------------------------------------------- */
-
-.about-layout {
-  font-family: "Courier New", Courier, monospace;
+.about-hero {
+  padding: 10px 0 60px;
 }
 
-.about-image {
-  text-align: center;
-  margin-bottom: 80px;
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  column-gap: 70px;
+  align-items: start;
 }
 
-.about-image img {
-  max-width: 100%;
-  height: auto;
-  width: 932px;
+.about-text-col h1 {
+  margin: 0 0 36px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .about-copy {
-  margin: 0 auto;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 560px;
 }
 
 .about-copy p {
-  line-height: 1.9;
-  margin-bottom: 28px;
+  margin: 0 0 34px;
+  line-height: 1.75;
+  font-size: 15px;
 }
 
+.about-image-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image-frame {
+  border: 1px solid #4f5b66;
+  padding: 10px;
+  display: inline-block;
+  background: transparent;
+}
+
+.about-image-frame img {
+  display: block;
+  width: 255px;
+  height: auto;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .about-text-col h1 {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .about-copy {
+    max-width: 100%;
+  }
+
+  .about-image-col {
+    justify-content: flex-start;
+  }
+
+  .about-image-frame img {
+    width: min(255px, 100%);
+  }
+}
 
 /* -----------------------------------------------------------------------------
    Projects
