@@ -87,6 +87,35 @@ a {
 
 
 /* -----------------------------------------------------------------------------
+   Shared Page Sections
+----------------------------------------------------------------------------- */
+.page-hero {
+  padding: 72px 0 24px;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-section {
+  padding: 16px 0 72px;
+}
+
+.content-narrow {
+  max-width: 760px;
+}
+
+.content-narrow p {
+  line-height: 1.9;
+  margin: 0 0 28px;
+}
+
+
+/* -----------------------------------------------------------------------------
    Homepage
 ----------------------------------------------------------------------------- */
 .home-hero {
@@ -128,35 +157,6 @@ a {
 
 .spaced {
   margin-top: 120px;
-}
-
-
-/* -----------------------------------------------------------------------------
-   Shared Page Sections
------------------------------------------------------------------------------ */
-.page-hero {
-  padding: 72px 0 24px;
-}
-
-.page-hero h1 {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 18px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.page-section {
-  padding: 16px 0 72px;
-}
-
-.content-narrow {
-  max-width: 760px;
-}
-
-.content-narrow p {
-  line-height: 1.9;
-  margin: 0 0 28px;
 }
 
 
@@ -203,7 +203,7 @@ a {
 
 
 /* -----------------------------------------------------------------------------
-   About page
+   About
 ----------------------------------------------------------------------------- */
 .about-hero {
   padding: 10px 0 60px;
@@ -242,7 +242,7 @@ a {
 }
 
 .about-image-frame {
-  padding: 0px;
+  padding: 0;
 }
 
 .about-image-frame img {
@@ -251,69 +251,79 @@ a {
   height: auto;
 }
 
-/* responsive */
-@media (max-width: 800px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    row-gap: 36px;
-  }
-
-  .about-text-col h1 {
-    font-size: 34px;
-    margin-bottom: 28px;
-  }
-
-  .about-copy {
-    max-width: 100%;
-  }
-
-  .about-image-col {
-    justify-content: flex-start;
-  }
-
-  .about-image-frame img {
-    width: min(255px, 100%);
-  }
-}
 
 /* -----------------------------------------------------------------------------
-   Projects page
+   Projects Index
 ----------------------------------------------------------------------------- */
-.projects-intro {
+.projects-index {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-.projects-intro p {
+.projects-index p {
   margin: 0 0 18px;
+  line-height: 1.8;
 }
 
-.project-section {
+.projects-note {
+  margin: 30px 0 40px;
+}
+
+.project-list p {
+  margin: 14px 0;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Shared Project Page Styles
+----------------------------------------------------------------------------- */
+.project-page {
   font-family: "Courier New", Courier, monospace;
 }
 
-.project-section h2 {
-  margin: 0 0 40px;
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: 0.08em;
+.project-page h1 {
+  margin-bottom: 40px;
 }
 
-/* Not Famous Last Words */
+.project-page p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.project-status {
+  text-align: center;
+  margin: 80px 0 40px;
+  letter-spacing: 0.15em;
+}
+
+.project-cta-stack {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.project-cta-stack p {
+  margin: 0 0 14px;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Not Famous Last Words
+----------------------------------------------------------------------------- */
 .nf-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   column-gap: 80px;
   align-items: start;
 }
 
 .nf-copy {
-  max-width: 460px;
-}
-
-.nf-copy p {
-  line-height: 1.9;
-  margin: 0 0 22px;
+  max-width: 520px;
 }
 
 .nf-poem {
@@ -326,34 +336,14 @@ a {
 }
 
 .poem-credit {
-  margin-top: 40px !important;
+  margin-top: 30px !important;
   text-align: right;
 }
 
-.project-status {
-  text-align: center;
-  margin: 90px 0 40px;
-}
 
-.project-status p {
-  margin: 0;
-  letter-spacing: 0.15em;
-}
-
-.project-cta-stack {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.project-cta-stack p {
-  margin: 0 0 18px;
-}
-
-/* Haiku */
-.haiku-section h2 {
-  margin-bottom: 28px;
-}
-
+/* -----------------------------------------------------------------------------
+   Haiku Project
+----------------------------------------------------------------------------- */
 .haiku-feature-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
@@ -366,8 +356,7 @@ a {
 }
 
 .haiku-copy p {
-  margin: 0 0 20px;
-  line-height: 1.9;
+  margin-bottom: 20px;
 }
 
 .haiku-image {
@@ -375,10 +364,10 @@ a {
 }
 
 .haiku-image img {
-  display: block;
   width: 100%;
   max-width: 620px;
   height: auto;
+  display: block;
 }
 
 .haiku-featured {
@@ -387,28 +376,21 @@ a {
 }
 
 .haiku-featured p {
-  margin: 0 0 14px;
+  margin-bottom: 12px;
 }
 
 .centered-status {
-  margin-top: 40px;
-}
-
-.centered-status p + p {
-  margin-top: 24px;
+  text-align: center;
+  margin: 60px 0 20px;
 }
 
 .haiku-poem-grid {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .haiku-poem {
   max-width: 260px;
-  margin-bottom: 70px;
-}
-
-.haiku-poem p {
-  margin: 0 0 12px;
+  margin-bottom: 60px;
 }
 
 .haiku-poem.left {
@@ -425,39 +407,36 @@ a {
 }
 
 .haiku-poem.lower {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .haiku-poem.bottom {
   margin-top: 30px;
 }
 
-/* Fragments */
-.fragments-section h2 {
-  margin-bottom: 34px;
-}
 
+/* -----------------------------------------------------------------------------
+   Fragments
+----------------------------------------------------------------------------- */
 .fragments-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 50px;
+  column-gap: 60px;
   align-items: start;
 }
 
-.fragment-col p,
-.fragment-full p {
-  margin: 0 0 18px;
-  line-height: 1.9;
+.fragment-col p {
+  margin-bottom: 18px;
 }
 
 .fragment-label {
   text-align: center;
-  margin-bottom: 30px !important;
+  margin-bottom: 24px;
   letter-spacing: 0.08em;
 }
 
 .fragment-mini {
-  margin-top: 90px;
+  margin-top: 80px;
   text-align: right;
 }
 
@@ -465,32 +444,8 @@ a {
   margin-top: 90px;
 }
 
-/* responsive */
-@media (max-width: 900px) {
-  .nf-grid,
-  .haiku-feature-grid,
-  .fragments-grid {
-    grid-template-columns: 1fr;
-    row-gap: 40px;
-  }
-
-  .nf-poem,
-  .haiku-featured,
-  .fragment-mini {
-    text-align: left;
-    padding-top: 0;
-  }
-
-  .poem-credit {
-    text-align: left;
-  }
-
-  .haiku-poem,
-  .haiku-poem.right {
-    max-width: 100%;
-    text-align: left;
-    margin-left: 0;
-  }
+.fragment-full p {
+  margin-bottom: 18px;
 }
 
 
@@ -525,6 +480,33 @@ a {
 /* -----------------------------------------------------------------------------
    Responsive
 ----------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .nf-grid,
+  .haiku-feature-grid,
+  .fragments-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .nf-poem,
+  .haiku-featured,
+  .fragment-mini {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .poem-credit {
+    text-align: left;
+  }
+
+  .haiku-poem,
+  .haiku-poem.right {
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 800px) {
   .header-inner {
     flex-direction: column;
@@ -560,21 +542,40 @@ a {
   .block.center,
   .service-intro,
   .service-center,
-  .content-narrow {
+  .content-narrow,
+  .about-copy,
+  .nf-copy,
+  .haiku-copy,
+  .projects-index {
     max-width: 100%;
   }
 
   .block.right,
   .block.center,
   .service-center,
-  .projects-intro,
-  .project-index,
-  .project-block h2,
-  .poem-block,
-  .project-meta,
-  .contact-copy {
+  .contact-copy,
+  .project-status,
+  .project-cta-stack {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .about-text-col h1 {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .about-image-col {
+    justify-content: flex-start;
+  }
+
+  .about-image-frame img {
+    width: min(255px, 100%);
   }
 }
