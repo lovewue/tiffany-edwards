@@ -344,19 +344,30 @@ a {
 /* -----------------------------------------------------------------------------
    Haiku Project
 ----------------------------------------------------------------------------- */
+.haiku-section {
+  padding-top: 0;
+}
+
+.haiku-section .container {
+  position: relative;
+}
+
 .haiku-feature-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: minmax(0, 620px) 1fr;
   column-gap: 70px;
   align-items: start;
 }
 
 .haiku-copy {
   max-width: 620px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .haiku-copy p {
-  margin-bottom: 20px;
+  margin: 0 0 18px;
+  line-height: 1.9;
+  font-size: 15px;
 }
 
 .haiku-image {
@@ -371,49 +382,37 @@ a {
 }
 
 .haiku-featured {
-  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  text-align: right;
   align-self: center;
+  padding-top: 120px;
 }
 
 .haiku-featured p {
-  margin-bottom: 12px;
+  margin: 0 0 14px;
+  font-size: 15px;
+}
+
+.haiku-status-wrap {
+  margin-top: 34px;
+  text-align: center;
 }
 
 .centered-status {
   text-align: center;
-  margin: 60px 0 20px;
+  margin: 0 0 24px;
 }
 
-.haiku-poem-grid {
-  margin-top: 80px;
+.centered-status p {
+  margin: 0;
+  letter-spacing: 0.15em;
 }
 
-.haiku-poem {
-  max-width: 260px;
-  margin-bottom: 60px;
+.haiku-preorder p {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
 }
-
-.haiku-poem.left {
-  text-align: left;
-}
-
-.haiku-poem.right {
-  text-align: right;
-  margin-left: auto;
-}
-
-.haiku-poem.middle {
-  margin-top: 30px;
-}
-
-.haiku-poem.lower {
-  margin-top: 60px;
-}
-
-.haiku-poem.bottom {
-  margin-top: 30px;
-}
-
 
 /* -----------------------------------------------------------------------------
    Fragments
