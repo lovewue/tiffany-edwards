@@ -281,6 +281,39 @@ a {
 
 
 /* -----------------------------------------------------------------------------
+   Projects Sub Nav
+----------------------------------------------------------------------------- */
+.projects-subnav {
+  padding: 8px 0 34px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.projects-subnav nav {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.projects-subnav a {
+  color: #111;
+}
+
+.projects-subnav a:hover {
+  opacity: 0.6;
+}
+
+.projects-subnav em {
+  font-style: italic;
+}
+
+.projects-subnav .divider {
+  color: #777;
+}
+
+
+/* -----------------------------------------------------------------------------
    Shared Project Page Styles
 ----------------------------------------------------------------------------- */
 .project-page {
@@ -348,53 +381,52 @@ a {
   padding-top: 0;
 }
 
-.haiku-section .container {
-  position: relative;
-}
-
 .haiku-feature-grid {
   display: grid;
-  grid-template-columns: minmax(0, 620px) 1fr;
+  grid-template-columns: minmax(0, 625px) 1fr;
   column-gap: 70px;
   align-items: start;
 }
 
-.haiku-copy {
-  max-width: 620px;
+.haiku-panel {
+  position: relative;
+  min-height: 625px;
+  background-image: url("../images/haiku-book.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.haiku-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 430px;
+  padding: 18px 18px 18px 10px;
   font-family: "Courier New", Courier, monospace;
 }
 
-.haiku-copy p {
+.haiku-overlay-text p {
   margin: 0 0 18px;
   line-height: 1.9;
   font-size: 15px;
-}
-
-.haiku-image {
-  margin-top: 20px;
-}
-
-.haiku-image img {
-  width: 100%;
-  max-width: 620px;
-  height: auto;
-  display: block;
 }
 
 .haiku-featured {
   font-family: "Courier New", Courier, monospace;
   text-align: right;
   align-self: center;
-  padding-top: 120px;
+  padding-top: 250px;
 }
 
 .haiku-featured p {
   margin: 0 0 14px;
   font-size: 15px;
+  line-height: 1.9;
 }
 
 .haiku-status-wrap {
-  margin-top: 34px;
+  margin-top: 36px;
   text-align: center;
 }
 
@@ -414,24 +446,6 @@ a {
   font-size: 15px;
 }
 
-/* -----------------------------------------------------------------------------
-   Haiku Responsive
------------------------------------------------------------------------------ */
-@media (max-width: 900px) {
-  .haiku-feature-grid {
-    grid-template-columns: 1fr;
-    row-gap: 36px;
-  }
-
-  .haiku-copy {
-    max-width: 100%;
-  }
-
-  .haiku-featured {
-    text-align: left;
-    padding-top: 0;
-  }
-}
 
 /* -----------------------------------------------------------------------------
    Fragments
@@ -466,38 +480,6 @@ a {
   margin-bottom: 18px;
 }
 
-/* ---------------------------------------
-   Projects Sub Nav
---------------------------------------- */
-
-.projects-subnav {
-  padding: 18px 0 40px;
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-}
-
-.projects-subnav nav {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 15px;
-}
-
-.projects-subnav a {
-  color: #111;
-}
-
-.projects-subnav a:hover {
-  opacity: 0.6;
-}
-
-.projects-subnav em {
-  font-style: italic;
-}
-
-.projects-subnav .divider {
-  color: #777;
-}
 
 /* -----------------------------------------------------------------------------
    Contact
@@ -549,11 +531,15 @@ a {
     text-align: left;
   }
 
-  .haiku-poem,
-  .haiku-poem.right {
-    max-width: 100%;
-    text-align: left;
-    margin-left: 0;
+  .haiku-panel {
+    min-height: 520px;
+    background-size: cover;
+  }
+
+  .haiku-overlay-text {
+    position: relative;
+    width: auto;
+    padding: 18px 18px 18px 10px;
   }
 }
 
@@ -595,7 +581,6 @@ a {
   .content-narrow,
   .about-copy,
   .nf-copy,
-  .haiku-copy,
   .projects-index {
     max-width: 100%;
   }
@@ -627,5 +612,10 @@ a {
 
   .about-image-frame img {
     width: min(255px, 100%);
+  }
+
+  .projects-subnav nav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
