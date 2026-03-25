@@ -466,6 +466,7 @@ a {
 
 .haiku-poem.middle {
   margin-top: 30px;
+  
 }
 
 .haiku-poem.lower {
@@ -474,6 +475,14 @@ a {
 
 .haiku-poem.bottom {
   margin-top: 30px;
+}
+
+.haiku-poem.left.middle {
+  margin-left: 100px;
+}
+
+.haiku-poem.right.middle {
+  margin-right: 100px;
 }
 
 
