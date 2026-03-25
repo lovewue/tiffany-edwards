@@ -455,6 +455,11 @@ a {
   margin-bottom: 60px;
 }
 
+.haiku-poem p {
+  margin: 0;
+  line-height: 1.5;
+}
+
 .haiku-poem.left {
   text-align: left;
 }
@@ -466,7 +471,6 @@ a {
 
 .haiku-poem.middle {
   margin-top: 30px;
-  
 }
 
 .haiku-poem.lower {
@@ -482,7 +486,8 @@ a {
 }
 
 .haiku-poem.right.middle {
-  margin-right: 100px;
+  margin-left: auto;
+  padding-right: 100px;
 }
 
 
