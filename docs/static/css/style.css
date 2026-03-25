@@ -446,6 +446,36 @@ a {
   font-size: 15px;
 }
 
+.haiku-poem-grid {
+  margin-top: 80px;
+}
+
+.haiku-poem {
+  max-width: 260px;
+  margin-bottom: 60px;
+}
+
+.haiku-poem.left {
+  text-align: left;
+}
+
+.haiku-poem.right {
+  text-align: right;
+  margin-left: auto;
+}
+
+.haiku-poem.middle {
+  margin-top: 30px;
+}
+
+.haiku-poem.lower {
+  margin-top: 60px;
+}
+
+.haiku-poem.bottom {
+  margin-top: 30px;
+}
+
 
 /* -----------------------------------------------------------------------------
    Fragments
