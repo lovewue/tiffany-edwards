@@ -147,10 +147,9 @@ a {
 
 .block.right {
   max-width: 900px;
-  margin-left: auto;
+  margin: 40px 0 40px auto;
   text-align: right;
   white-space: nowrap;
-  margin-bottom: 40px;
 }
 
 .block.center {
