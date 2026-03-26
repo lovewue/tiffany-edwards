@@ -140,12 +140,14 @@ a {
 }
 
 .block.left {
-  max-width: 600px;
+  max-width: 720px;
+  text-align: left;
 }
 
 .block.right {
-  max-width: 600px;
+  max-width: 720px;
   margin-left: auto;
+  text-align: right;
 }
 
 .block.center {
