@@ -169,7 +169,7 @@ a {
 .block.subheading img {
   display: block;
   margin-left: auto;
-  max-width: 80%;
+  max-width: 320px;
   height: auto;
 }
 
