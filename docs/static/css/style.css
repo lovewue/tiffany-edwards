@@ -241,6 +241,17 @@ a {
   margin: 0 0 16px;
 }
 
+.services-heading {
+  margin: 0 0 40px;
+  text-align: left; /* or center if you prefer */
+}
+
+.services-heading img {
+  display: block;
+  max-width: 420px;
+  height: auto;
+}
+
 
 /* -----------------------------------------------------------------------------
    About
