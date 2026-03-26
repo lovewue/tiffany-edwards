@@ -252,6 +252,25 @@ a {
   height: auto;
 }
 
+.service-bullets {
+  max-width: 760px;
+  margin: 60px 0;
+}
+
+.service-bullets p {
+  position: relative;
+  padding-left: 22px;
+  margin: 0 0 22px;
+  text-align: left;
+}
+
+.service-bullets p::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /* -----------------------------------------------------------------------------
    Services white break
 ----------------------------------------------------------------------------- */
