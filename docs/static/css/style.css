@@ -129,6 +129,7 @@ a {
 }
 
 .tagline {
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
   font-size: 18px;
   letter-spacing: 0.08em;
