@@ -500,10 +500,13 @@ a {
 
 .nf-copy {
   max-width: 520px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nf-poem {
   font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.8;
   text-align: center;
   padding-top: 90px;
 }
