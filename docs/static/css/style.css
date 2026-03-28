@@ -448,7 +448,7 @@ a {
   color: #777;
 }
 
-.page-hero + .projects-subnav {
+.projects-index .projects-subnav {
   margin-top: 60px;
 }
 
