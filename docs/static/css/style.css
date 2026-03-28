@@ -246,7 +246,7 @@ a {
 
 .services-heading {
   margin: 0 0 40px;
-  text-align: left; /* or center if you prefer */
+  text-align: left;
 }
 
 .services-heading img {
@@ -282,6 +282,10 @@ a {
   align-items: start;
 }
 
+.service-detail-col {
+  min-width: 0;
+}
+
 .service-detail-col h2 {
   margin: 0 0 34px;
   font-family: "Arial Narrow", Arial, sans-serif;
@@ -314,15 +318,6 @@ a {
   letter-spacing: 0.12em;
 }
 
-.service-detail-grid {
-  grid-template-columns: 1fr;
-  row-gap: 50px;
-}
-
-.service-detail-side {
-  max-width: 100%;
-}
-
 /* -----------------------------------------------------------------------------
    Services white break
 ----------------------------------------------------------------------------- */
@@ -341,7 +336,6 @@ a {
 .services-white-break .service-center:last-child {
   margin-bottom: 0;
 }
-
 
 /* -----------------------------------------------------------------------------
    About
@@ -879,4 +873,13 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+.service-detail-grid {
+  grid-template-columns: 1fr;
+  row-gap: 50px;
+}
+
+.service-detail-side {
+  max-width: 100%;
+}
 }
