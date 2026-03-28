@@ -26,18 +26,54 @@
 </header>
 
   <main class="site-main">
-    <section class="page-hero">
-  <div class="container">
-    <h1>Contact</h1>
-  </div>
-</section>
+    <section class="page-section">
+  <div class="container contact-layout">
 
-<section class="page-section">
-  <div class="container">
-    <div class="content-narrow contact-copy">
-      <p>Enquiries welcome.</p>
-      <p><a href="mailto:hello@therightwords.co">hello@therightwords.co</a></p>
-    </div>
+    <p class="contact-intro">
+      If you have a commission or project you would like to discuss, please complete the form below
+    </p>
+
+    <p class="contact-email">
+      <em>or</em> email me at hello@tiffanywedwards.com.
+    </p>
+
+    <form class="contact-form" method="POST" action="https://formspree.io/f/xbdpdaej">
+
+      <input type="hidden" name="_subject" value="New enquiry — The Right Words">
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="form-row two">
+        <div class="form-field">
+          <label>First Name [required]</label>
+          <input type="text" name="first_name" required>
+        </div>
+
+        <div class="form-field">
+          <label>Last Name [required]</label>
+          <input type="text" name="last_name" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Email [required]</label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Please describe your commission or project [required]</label>
+          <textarea name="message" rows="7" required></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="form-submit">Submit</button>
+      </div>
+
+    </form>
+
   </div>
 </section>
   </main>
@@ -47,5 +83,6 @@
     <p>&copy; 2026 Tiffany W Edwards. All rights reserved.</p>
   </div>
 </footer>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
