@@ -44,6 +44,9 @@ a {
   display: block;
 }
 
+.site-nav a.is-hidden {
+  display: none;
+}
 
 /* -----------------------------------------------------------------------------
    Header Navigation
