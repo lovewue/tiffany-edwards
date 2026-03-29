@@ -26,6 +26,8 @@ a {
 .site-header {
   padding: 20px 0 12px;
   background: #fff;
+  position: relative;
+  z-index: 1000;
 }
 
 .header-inner {
@@ -33,6 +35,7 @@ a {
   justify-content: space-between;
   align-items: flex-end;
   gap: 32px;
+  position: relative;
 }
 
 .site-logo-link {
@@ -75,6 +78,43 @@ a {
   content: "|";
   color: #999;
   margin-right: 10px;
+}
+
+/* -----------------------------------------------------------------------------
+   Hamburger Button
+----------------------------------------------------------------------------- */
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 1.5px;
+  background: #111;
+  width: 100%;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
 }
 
 
@@ -386,7 +426,6 @@ a {
   height: auto;
 }
 
-
 /* -----------------------------------------------------------------------------
    Projects Index
 ----------------------------------------------------------------------------- */
@@ -413,7 +452,6 @@ a {
 .project-list a:hover {
   text-decoration: underline;
 }
-
 
 /* -----------------------------------------------------------------------------
    Projects Sub Nav
@@ -487,7 +525,6 @@ a {
   margin: 0 0 14px;
 }
 
-
 /* -----------------------------------------------------------------------------
    Not Famous Last Words
 ----------------------------------------------------------------------------- */
@@ -520,22 +557,6 @@ a {
   text-align: right;
 }
 
-.project-status {
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  margin: 80px 0 40px;
-  letter-spacing: 0.15em;
-}
-
-.project-cta-stack {
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.project-cta-stack p {
-  margin: 0 0 14px;
-}
 /* -----------------------------------------------------------------------------
    Haiku Project
 ----------------------------------------------------------------------------- */
@@ -666,6 +687,7 @@ a {
 .haiku-poem.right.middle {
   transform: translateX(-100px);
 }
+
 /* -----------------------------------------------------------------------------
    Fragments
 ----------------------------------------------------------------------------- */
@@ -699,11 +721,9 @@ a {
   margin-bottom: 18px;
 }
 
-
 /* --------------------------------
    Contact Form
 -------------------------------- */
-
 .contact-layout {
   font-family: "Times New Roman", Times, serif;
 }
@@ -745,6 +765,7 @@ a {
   font-family: "Times New Roman", Times, serif;
   font-size: 15px;
   letter-spacing: 0.05em;
+  box-sizing: border-box;
 }
 
 .form-field textarea {
@@ -774,14 +795,13 @@ a {
   font-style: italic;
 }
 
-
 /* -----------------------------------------------------------------------------
    Footer
 ----------------------------------------------------------------------------- */
 .site-footer {
   padding: 32px 0;
   background: #fff;
-  font-family: Times New Roman;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .site-footer p {
@@ -790,14 +810,15 @@ a {
   color: #444;
 }
 
-
 /* -----------------------------------------------------------------------------
-   Responsive
+   Tablet
 ----------------------------------------------------------------------------- */
 @media (max-width: 900px) {
   .nf-grid,
   .haiku-feature-grid,
-  .fragments-grid {
+  .fragments-grid,
+  .service-detail-grid,
+  .about-grid {
     grid-template-columns: 1fr;
     row-gap: 40px;
   }
@@ -815,7 +836,6 @@ a {
 
   .haiku-panel {
     min-height: 520px;
-    background-size: cover;
   }
 
   .haiku-overlay-text {
@@ -823,36 +843,114 @@ a {
     width: auto;
     padding: 18px 18px 18px 10px;
   }
-}
 
-@media (max-width: 800px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 18px;
-    align-items: flex-start;
+  .service-detail-side,
+  .about-copy,
+  .nf-copy,
+  .projects-index {
+    max-width: 100%;
   }
 
-  .site-nav {
-    flex-wrap: wrap;
+  .about-image-col {
     justify-content: flex-start;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Mobile
+----------------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  .container {
+    width: min(100% - 28px, 932px);
+  }
+
+  .site-header {
+    padding: 18px 0 10px;
+  }
+
+  .header-inner {
+    align-items: center;
+    gap: 16px;
   }
 
   .site-logo {
-    max-height: 56px;
+    max-height: 50px;
   }
 
-  .site-nav a,
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    width: min(260px, calc(100vw - 28px));
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    z-index: 1001;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .site-nav a + a::before {
+    content: none;
+  }
+
+  .site-nav a.is-hidden {
+    display: none;
+  }
+
+  .site-main {
+    background-size: 100% auto;
+  }
+
+  .page-hero {
+    padding: 44px 0 18px;
+  }
+
   .page-hero h1 {
     font-size: 14px;
   }
 
+  .page-section {
+    padding: 12px 0 48px;
+  }
+
+  .home-hero {
+    padding: 120px 0 70px;
+  }
+
   .tagline {
-    margin: 50px 0 90px;
+    margin: 40px 0 70px;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .block {
-    margin: 45px 0;
     font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .block + .block {
+    margin-top: 28px;
   }
 
   .block.right,
@@ -865,6 +963,7 @@ a {
   .nf-copy,
   .projects-index {
     max-width: 100%;
+    white-space: normal;
   }
 
   .block.right,
@@ -872,41 +971,107 @@ a {
   .service-center,
   .contact-copy,
   .project-status,
-  .project-cta-stack {
+  .project-cta-stack,
+  .haiku-featured {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    row-gap: 36px;
+  .block.subheading img,
+  .services-heading img {
+    max-width: 100%;
   }
 
-  .about-text-col h1 {
-    font-size: 34px;
-    margin-bottom: 28px;
+  .home-white-break,
+  .services-white-break {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .about-image-col {
-    justify-content: flex-start;
+  .about-text-col h1,
+  .service-detail-col h2 {
+    font-size: 30px;
+    margin-bottom: 24px;
   }
 
-  .about-image-frame img {
-    width: min(255px, 100%);
+  .about-copy p,
+  .service-detail-col p,
+  .content-narrow p,
+  .haiku-overlay-text p,
+  .contact-layout p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .projects-subnav {
+    margin-top: 20px;
+    padding-bottom: 24px;
   }
 
   .projects-subnav nav {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 6px;
   }
 
-.service-detail-grid {
-  grid-template-columns: 1fr;
-  row-gap: 50px;
-}
+  .nf-poem,
+  .haiku-featured,
+  .fragment-mini {
+    padding-top: 0;
+  }
 
-.service-detail-side {
-  max-width: 100%;
-}
+  .haiku-panel {
+    min-height: 380px;
+    background-position: center top;
+  }
+
+  .haiku-featured {
+    width: auto;
+    padding-top: 0;
+  }
+
+  .haiku-featured p,
+  .haiku-poem p {
+    white-space: normal;
+  }
+
+  .haiku-poem {
+    width: auto !important;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    text-align: left !important;
+  }
+
+  .haiku-poem.right p {
+    text-align: left;
+  }
+
+  .fragments-grid {
+    row-gap: 24px;
+  }
+
+  .form-row.two {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-submit {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .site-footer {
+    padding: 24px 0;
+  }
+
+  .site-footer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
