@@ -782,6 +782,8 @@ a {
 
 .fragment-full {
   margin-top: 90px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
 }
 
 .fragment-full p {
