@@ -769,14 +769,14 @@ a {
 
 .fragment-label {
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   letter-spacing: 0.08em;
   font-weight: bold;
   font-size: 15px;
 }
 
 .fragment-mini {
-  margin-top: 80px;
+  margin-top: 100px;
   text-align: right;
 }
 
