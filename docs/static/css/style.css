@@ -53,6 +53,11 @@ a {
   display: none;
 }
 
+.site-nav {
+  position: relative;
+  top: -3px; /* try -2px to -5px and tweak */
+}
+
 
 /* -----------------------------------------------------------------------------
    Header Navigation
