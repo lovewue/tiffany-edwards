@@ -356,9 +356,9 @@ a {
 
 .service-detail-col h2 {
   margin: 0 0 34px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
   font-size: 28px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: normal;
 }
