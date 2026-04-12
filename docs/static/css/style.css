@@ -557,7 +557,7 @@ a {
   text-align: center;
   margin: 80px 0 40px;
   letter-spacing: 0.15em;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -565,9 +565,9 @@ a {
 .project-cta-stack {
   text-align: center;
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .project-cta-stack p {
