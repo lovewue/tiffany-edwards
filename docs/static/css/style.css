@@ -171,7 +171,7 @@ a {
 }
 
 .page-section {
-  padding: 40px 0 72px;
+  padding: 16px 0 72px;
 }
 
 .content-narrow {
@@ -808,6 +808,9 @@ a {
 
 .contact-form {
   margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e5e5e5;
 }
 
 .form-row {
@@ -830,7 +833,7 @@ a {
 .form-field textarea {
   width: 100%;
   border: 1px solid #999;
-  background: transparent;
+  background: #fff;
   padding: 12px;
   font-family: "Times New Roman", Times, serif;
   font-size: 15px;
@@ -845,7 +848,6 @@ a {
 .form-submit {
   display: inline-block;
   background: transparent;
-  background-color: transparent;
   border: 1px solid #111;
   padding: 12px 28px;
   font-family: "Times New Roman", Times, serif;
@@ -876,7 +878,6 @@ button.form-submit {
   margin-top: 20px;
   font-style: italic;
 }
-
 
 /* -----------------------------------------------------------------------------
    Footer
