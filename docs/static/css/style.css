@@ -279,7 +279,7 @@ a {
 
 .service-intro {
   max-width: 900px;
-  margin: 40 0 0px;
+  margin: 0 0 0px;
 }
 
 .service-center {
@@ -390,7 +390,7 @@ a {
 ----------------------------------------------------------------------------- */
 .services-white-break {
   background: #fff;
-  padding: 30px 0 20px;
+  padding: 60px 0 20px;
   margin: -20px calc(50% - 50vw) 60px;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
