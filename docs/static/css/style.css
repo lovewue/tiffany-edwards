@@ -279,7 +279,7 @@ a {
 
 .service-intro {
   max-width: 900px;
-  margin: 0 0 0px;
+  margin: 40 0 0px;
 }
 
 .service-center {
@@ -1002,7 +1002,7 @@ button.form-submit {
   }
 
   .page-section {
-    padding: 40px 0 48px;
+    padding: 12px 0 48px;
   }
 
   .home-hero {
