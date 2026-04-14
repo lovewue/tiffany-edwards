@@ -359,7 +359,7 @@ a {
   background-size: 932px auto;
 
   /* full-width breakout (same pattern as white break) */
-  margin: 40px calc(50% - 50vw);
+  margin: 0px calc(50% - 50vw);
   padding: 60px calc(50vw - 50%);
 
   /* spacing inside */
