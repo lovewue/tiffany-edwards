@@ -188,7 +188,27 @@ a {
    Homepage
 ----------------------------------------------------------------------------- */
 .home-hero {
+  position: relative;
   padding: 300px 0 120px;
+  background-image: url("../images/lined-background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  overflow: hidden;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 84px; /* adjust if needed */
+  background-image: url("../images/lined-background.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  pointer-events: none;
 }
 
 .home-composition {
