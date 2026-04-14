@@ -251,8 +251,8 @@ a {
 
 .home-white-break {
   background: #fff;
-  padding: 120px 0 30px;
-  margin: -100px calc(50% - 50vw) 40px;
+  padding: 70px 0 30px;
+  margin: -120px calc(50% - 50vw) 40px;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
 }
