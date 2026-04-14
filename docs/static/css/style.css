@@ -204,18 +204,21 @@ a {
   letter-spacing: 0.08em;
   font-weight: bold;
 
-  width: 932px;
+  width: 100%;
+  max-width: 932px;
   height: 220px;
-  margin: 20px auto 200px;
+  margin: 20px auto 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-image: url("../images/lined-background.png");
+  background-image: url("../images/Lined-Background.png");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 932px auto;
+  background-size: 100% auto;
 }
 
 .block {
