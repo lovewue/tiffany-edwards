@@ -188,27 +188,8 @@ a {
    Homepage
 ----------------------------------------------------------------------------- */
 .home-hero {
-  position: relative;
-  padding: 300px 0 120px;
-  background-image: url("../images/lined-background.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% auto;
-  overflow: hidden;
-}
-
-.home-hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 84px; /* adjust if needed */
-  background-image: url("../images/lined-background.png");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 100% auto;
-  pointer-events: none;
+  padding: 200px 0 140px;
+  background: none;
 }
 
 .home-composition {
@@ -221,8 +202,20 @@ a {
   text-align: center;
   font-size: 15px;
   letter-spacing: 0.08em;
-  margin: 20px 0 200px;
   font-weight: bold;
+
+  width: 932px;
+  height: 220px;
+  margin: 20px auto 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/lined-background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 932px auto;
 }
 
 .block {
@@ -251,7 +244,7 @@ a {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-   font-weight: bold;
+  font-weight: bold;
 }
 
 .spaced {
@@ -283,13 +276,24 @@ a {
 
 .block.center.spaced.courier {
   margin-top: 60px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .block.center.spaced.courier + .block {
   margin-top: 10px;
 }
 
+.home-composition > .block.center:last-child::after {
+  content: "";
+  display: block;
+  width: 932px;
+  height: 84px;
+  margin: 40px auto 0;
+  background-image: url("../images/lined-background.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 932px auto;
+}
 
 /* -----------------------------------------------------------------------------
    Services
