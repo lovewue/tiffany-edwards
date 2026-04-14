@@ -636,7 +636,7 @@ a {
 
 .nf-white {
   background: #fff;
-  padding: 40px 40px 20px 0;
+  padding: 0px 40px 20px 0;
   margin-right: -40px; /* bleed into the gap */
 }
 
