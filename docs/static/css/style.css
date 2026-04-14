@@ -629,7 +629,7 @@ a {
 ----------------------------------------------------------------------------- */
 .nf-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   align-items: stretch;
 }
@@ -640,7 +640,6 @@ a {
 }
 
 .nf-copy {
-  max-width: 520px;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
   display: flex;
