@@ -353,7 +353,16 @@ a {
 }
 
 .service-bullets {
-  margin: 0 0;
+  background-image: url("../images/Lined-Background.png");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 932px auto;
+
+  /* full-width breakout (same pattern as white break) */
+  margin: 40px calc(50% - 50vw);
+  padding: 60px calc(50vw - 50%);
+
+  /* spacing inside */
 }
 
 .service-bullets p {
