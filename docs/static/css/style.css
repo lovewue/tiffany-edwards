@@ -638,6 +638,8 @@ a {
   max-width: 520px;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
+  background: #fff;
+  padding: 40px;
 }
 
 .nf-poem {
@@ -650,7 +652,6 @@ a {
 
 .nf-poem p {
   margin: 0 0 14px;
-  
 }
 
 .poem-credit {
@@ -658,20 +659,7 @@ a {
   text-align: right;
 }
 
-/* -----------------------------------------------------------------------------
-   Not Famous white section
------------------------------------------------------------------------------ */
-.nf-white {
-  background: #fff;
 
-  /* full-width breakout */
-  margin: 0 calc(50% - 50vw);
-  padding-left: calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
-
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
 /* -----------------------------------------------------------------------------
    Haiku Project
