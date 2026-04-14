@@ -629,23 +629,21 @@ a {
 ----------------------------------------------------------------------------- */
 .nf-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) 320px;
   column-gap: 80px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .nf-white {
   background: #fff;
-  display: flex;
-  padding: 50px 60px 40px 30px; /* top, right, bottom, left */
+  padding: 40px 0 20px;
+  margin-right: -40px; /* bleed into column gap */
 }
 
 .nf-copy {
+  max-width: 520px;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .nf-poem {
@@ -664,7 +662,6 @@ a {
   margin-top: 30px !important;
   text-align: right;
 }
-
 /* -----------------------------------------------------------------------------
    Haiku Project
 ----------------------------------------------------------------------------- */
