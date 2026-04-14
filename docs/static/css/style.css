@@ -310,7 +310,7 @@ a {
 
 .service-intro {
   max-width: 900px;
-  margin: 0 0 0px;
+  margin: 0 0 0;
 }
 
 .service-center {
@@ -370,39 +370,36 @@ a {
   top: 0;
 }
 
-.service-detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 80px;
+/* single flowing detail section */
+.service-detail-single {
   margin-top: 60px;
-  align-items: start;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
-.service-detail-col {
-  min-width: 0;
-  text-align: justify;
-}
-
-.service-detail-col h2 {
-  margin: 0 0 34px;
+.service-detail-single h2 {
+  margin: 40px 0 20px;
   font-family: 'Bebas Neue', 'Arial Narrow', 'Helvetica Neue Condensed Bold', 'Impact', sans-serif;
   font-size: 28px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: normal;
+  text-align: left;
 }
 
-.service-detail-col p {
+.service-detail-single h2:first-of-type {
+  margin-top: 0;
+}
+
+.service-detail-single p {
+  max-width: 700px;
   margin: 0 0 24px;
   line-height: 1.9;
-}
-
-.service-detail-side {
-  max-width: 360px;
+  text-align: justify;
 }
 
 .service-cta-inline {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
@@ -415,9 +412,7 @@ a {
 .service-cta-inline p:first-child {
   font-family: "Courier New", Courier, monospace;
   letter-spacing: 0.12em;
-  
 }
-
 
 /* -----------------------------------------------------------------------------
    Services white break
@@ -437,8 +432,6 @@ a {
 .services-white-break .service-center:last-child {
   margin-bottom: 0;
 }
-
-
 /* -----------------------------------------------------------------------------
    About
 ----------------------------------------------------------------------------- */
