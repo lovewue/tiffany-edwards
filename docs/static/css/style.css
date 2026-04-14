@@ -148,7 +148,10 @@ a {
 ----------------------------------------------------------------------------- */
 .site-main {
   min-height: 70vh;
-  background: none;
+  background-image: url("../images/Lined-Background.png");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 932px auto;
 }
 
 
@@ -262,7 +265,7 @@ a {
 .home-white-break {
   background: #fff;
   padding: 70px 0 30px;
-  margin: -100px calc(50% - 50vw) 40px;
+  margin: -160px calc(50% - 50vw) 40px; /* increased from -100px */
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
 }
