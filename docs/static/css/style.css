@@ -629,19 +629,18 @@ a {
 ----------------------------------------------------------------------------- */
 .nf-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   align-items: start;
 }
 
 .nf-white {
   background: #fff;
-  padding: 40px 0 20px;
-  margin-right: -40px; /* bleed into column gap */
+  padding: 40px 40px 20px 0;
+  margin-right: -40px; /* bleed into the gap */
 }
 
 .nf-copy {
-  max-width: 520px;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
 }
@@ -662,6 +661,7 @@ a {
   margin-top: 30px !important;
   text-align: right;
 }
+
 /* -----------------------------------------------------------------------------
    Haiku Project
 ----------------------------------------------------------------------------- */
