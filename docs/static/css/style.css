@@ -859,17 +859,17 @@ a {
 ----------------------------------------------------------------------------- */
 .fragments-white-break {
   background: #fff;
-  padding: 60px 0 20px;
+  padding: 40px 0 20px;
   margin: -20px calc(50% - 50vw) 0;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
 }
 
-.services-white-break .service-intro:first-child {
+.fragments-white-break .fragments-intro:first-child {
   margin-top: 0;
 }
 
-.services-white-break .service-center:last-child {
+.fragments-white-break .fragments-center:last-child {
   margin-bottom: 0;
 }
 
